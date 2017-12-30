@@ -7,11 +7,11 @@ interface UserService{
 		return getUserFromEnv();
 	}
 	
-	default String getSystemUser(){
+	static String getSystemUser(){
 		return getUserFromEnv();
 	}
 	
-	private String getUserFromEnv() {
+	private static String getUserFromEnv() {
 		return System.getenv("USER");
 	}
 
@@ -27,7 +27,7 @@ public class SimpleUserService implements UserService{
 	public static void main(String[] args) {
 		UserService s = new SimpleUserService();
 		System.out.println("Current User :: " + s.getUser());
-		System.out.println("Current System User :: " + s.getSystemUser());
+		System.out.println("Current System User :: " + UserService.getSystemUser());
 	}
 
 	
