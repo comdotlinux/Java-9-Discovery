@@ -1,6 +1,5 @@
-/**
- * InterfacePrivateMethods
- */
+package com.linux.java.se.nine.privateinterfacemethods;
+
 interface UserService{
 
 	default String getUser() {
@@ -16,8 +15,8 @@ interface UserService{
 	}
 
 }
-public class SimpleUserService implements UserService{
 
+public class SimpleUserService implements UserService{
 
 	@Override
 	public String getUser() {
@@ -30,5 +29,4 @@ public class SimpleUserService implements UserService{
 		System.out.println("Current System User :: " + UserService.getSystemUser());
 	}
 
-	
 }

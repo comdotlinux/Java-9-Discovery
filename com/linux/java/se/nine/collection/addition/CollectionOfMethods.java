@@ -1,3 +1,5 @@
+package com.linux.java.se.nine.collection.addition;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
