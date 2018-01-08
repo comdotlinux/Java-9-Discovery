@@ -1,12 +1,11 @@
+package com.linux.java.se.nine.trywithresources;
+
 import java.util.concurrent.TimeUnit;
 
-/**
- * TryWithResources
- */
-class SimpleResouce implements AutoCloseable{
+class SimpleResource implements AutoCloseable{
 	private final String name;
 
-	public SimpleResouce(String name) {
+	SimpleResource(String name) {
 		this.name = name;
 	}
 
@@ -25,17 +24,20 @@ class SimpleResouce implements AutoCloseable{
 	}
 }
 
+/**
+ * TryWithResources
+ */
 public class TryWithResources {
 	public static void main(String[] args) {
-		// Before
-		try(SimpleResouce res = new SimpleResouce("insideTryWithResource")){
+		System.out.println("-- Before :: ");
+		try(SimpleResource res = new SimpleResource("insideTryWithResource")){
 			String workResponse = res.doWork("old style try with resources");
 			System.out.println(workResponse);
 		}
-		
-		
-		// Java 9
-		SimpleResouce resource = new SimpleResouce("OutsideTryWithResource");
+
+
+		System.out.println("-- After :: ");
+		SimpleResource resource = new SimpleResource("OutsideTryWithResource");
 		try(resource) {
 			String workResponse = resource.doWork("yay! java 9");
 			System.out.println(workResponse);
