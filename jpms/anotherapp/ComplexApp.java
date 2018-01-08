@@ -30,5 +30,5 @@ public class ComplexApp extends Application{
 // java --module-path simple.jar:complex.jar --module complex/com.linux.complex.ComplexApp
 
 // using executable jars  :: seperating the options is important!!
-// jar -c -v -f complex.jar -e com.linux.complex.ComplexApp -C target/ .
-// 
+// jar --create --verbose --file complex.jar --main-class com.linux.complex.ComplexApp -C target/ .
+// java --module-path simple.jar:complex.jar -m complex
