@@ -3,7 +3,7 @@ package com.linux.complex;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-import app.GenerateContents;
+import com.linux.simple.generators.ContentsGenerator;
 
 /**
  * ComplexApp
@@ -14,12 +14,13 @@ public class ComplexApp extends Application{
 	}
 
 	public void start(Stage primaryStage) {
-		GenerateContents.defaultContent(primaryStage);
+		ContentsGenerator contentsGenerator = ContentsGenerator.getInstance();
+		contentsGenerator.generateContent(primaryStage, "Complicated Hello Java9" , ComplexApp.class.getSimpleName());
 		primaryStage.show();
 	}
 	
 }
 
 
-// javac com/linux/java/se/nine/jpms/anotherapp/module-info.java com/linux/java/se/nine/jpms/anotherapp/ComplexApp.java
+// javac --module-path app anotherapp/module-info.java anotherapp/com/linux/complex/ComplexApp.java
 // java --module-path jpms.app com.linux.java.se.nine.jpms.app.SimpleUiApp
