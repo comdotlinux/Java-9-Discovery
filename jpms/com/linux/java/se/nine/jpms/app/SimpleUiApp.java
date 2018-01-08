@@ -19,5 +19,5 @@ public class SimpleUiApp extends Application{
 
 
 
-// javac com/linux/java/se/nine/jpms/example/module-info.java com/linux/java/se/nine/jpms/example/internal/GenerateContents.java com/linux/java/se/nine/jpms/example/SimpleUiApp.java
-// java --module-path jpms.example com.linux.java.se.nine.jpms.example.SimpleUiApp
+// javac com/linux/java/se/nine/jpms/app/module-info.java com/linux/java/se/nine/jpms/app/internal/GenerateContents.java com/linux/java/se/nine/jpms/app/SimpleUiApp.java
+// java --module-path jpms.app com.linux.java.se.nine.jpms.app.SimpleUiApp
