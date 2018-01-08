@@ -1,9 +1,9 @@
-package com.linux.java.se.nine.jpms.app;
+package com.linux.simple;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-import com.linux.java.se.nine.jpms.app.internal.GenerateContents;
+import com.linux.simple.internal.GenerateContents;
 
 public class SimpleUiApp extends Application{
 
@@ -18,6 +18,7 @@ public class SimpleUiApp extends Application{
 }
 
 
-
-// javac com/linux/java/se/nine/jpms/app/module-info.java com/linux/java/se/nine/jpms/app/internal/GenerateContents.java com/linux/java/se/nine/jpms/app/SimpleUiApp.java
+// cd jpms
+// javac `find app -type f -name "*.java"`
+// jar -cvf jpms.app.jar -e com.linux.java.se.nine.jpms.app.SimpleUiApp  -C com/linux/java/se/nine/jpms/app .
 // java --module-path jpms.app com.linux.java.se.nine.jpms.app.SimpleUiApp
