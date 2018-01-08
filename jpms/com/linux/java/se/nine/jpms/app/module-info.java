@@ -1,4 +1,4 @@
-module com.linux.java.se.nine.jpms {
+module jpms.app {
 	requires javafx.graphics;
 	requires javafx.controls;
 }

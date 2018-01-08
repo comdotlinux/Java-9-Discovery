@@ -1,4 +1,4 @@
-package com.linux.java.se.nine.jpms.internal;
+package com.linux.java.se.nine.jpms.app.internal;
 
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
