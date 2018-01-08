@@ -24,3 +24,5 @@ public class SimpleUiApp extends Application{
 		primaryStage.show();
 	}
 }
+// export PATH=/usr/lib/jvm/java-9-oracle/bin:/usr/lib/jvm/java-9-oracle/db/bin:/usr/lib/jvm/java-9-oracle/jre/bin:$PATH
+// find Java-9-Discovery -type f -name "*.class" -exec rm -v {} + -o -name "*.jar" -exec rm -v {} +
