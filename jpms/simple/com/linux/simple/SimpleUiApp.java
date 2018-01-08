@@ -20,5 +20,5 @@ public class SimpleUiApp extends Application{
 
 
 // cd jpms
-// javac app/module-info.java app/com/linux/simple/SimpleUiApp.java app/com/linux/simple/generators/ContentsGenerator.java app/com/linux/simple/generators/internal/DefaultContentsGenerator.java
+// javac simple/module-info.java simple/com/linux/simple/SimpleUiApp.java simple/com/linux/simple/generators/ContentsGenerator.java simple/com/linux/simple/generators/internal/DefaultContentsGenerator.java
 // java --module-path simple --module simple/com.linux.simple.SimpleUiApp

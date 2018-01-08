@@ -22,3 +22,4 @@ public class ComplexApp extends Application{
 }
 		
 // javac --module-path simple complex/module-info.java complex/com/linux/complex/ComplexApp.java
+// java --module-path simple:complex --module complex/com.linux.complex.ComplexApp
