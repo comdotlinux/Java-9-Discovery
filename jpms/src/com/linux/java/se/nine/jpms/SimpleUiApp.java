@@ -24,3 +24,8 @@ public class SimpleUiApp extends Application{
 		primaryStage.show();
 	}
 }
+
+
+
+// javac com/module-info.java  com/linux/java/se/nine/jpms/SimpleUiApp.java
+// java --module-path com.linux.java.se.nine.jpms com.linux.java.se.nine.jpms.SimpleUiApp
