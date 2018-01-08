@@ -3,6 +3,7 @@ package com.linux.java.se.nine.jpms.internal;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.scene.control.Button;
 
 /**
  * DefaultStage

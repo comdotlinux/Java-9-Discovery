@@ -3,7 +3,7 @@ package com.linux.java.se.nine.jpms;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-import com.linux.java.se.nine.jpms.GenerateContents;
+import com.linux.java.se.nine.jpms.internal.GenerateContents;
 
 public class SimpleUiApp extends Application{
 
@@ -19,5 +19,5 @@ public class SimpleUiApp extends Application{
 
 
 
-// javac com/module-info.java  com/linux/java/se/nine/jpms/SimpleUiApp.java com/linux/java/se/nine/jpms/internal/GenerateContents.java
+// javac com/module-info.java com/linux/java/se/nine/jpms/internal/GenerateContents.java com/linux/java/se/nine/jpms/SimpleUiApp.java
 // java --module-path com.linux.java.se.nine.jpms com.linux.java.se.nine.jpms.SimpleUiApp
