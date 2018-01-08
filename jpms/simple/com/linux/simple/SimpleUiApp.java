@@ -1,4 +1,4 @@
-package com.linux.java.se.nine.jpms;
+package com.linux.simple;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
