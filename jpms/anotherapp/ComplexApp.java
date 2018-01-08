@@ -15,12 +15,10 @@ public class ComplexApp extends Application{
 
 	public void start(Stage primaryStage) {
 		ContentsGenerator contentsGenerator = ContentsGenerator.getInstance();
-		contentsGenerator.generateContent(primaryStage, "Complicated Hello Java9" , ComplexApp.class.getSimpleName());
+		contentsGenerator.generateContent(primaryStage, "Complex JavaFX Application", ComplexApp.class.getSimpleName());
 		primaryStage.show();
 	}
-	
+
 }
-
-
-// javac --module-path app anotherapp/module-info.java anotherapp/com/linux/complex/ComplexApp.java
-// java --module-path jpms.app com.linux.java.se.nine.jpms.app.SimpleUiApp
+		
+// javac --module-path simple complex/module-info.java complex/com/linux/complex/ComplexApp.java

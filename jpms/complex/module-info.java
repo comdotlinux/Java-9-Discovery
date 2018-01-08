@@ -1,5 +1,5 @@
-module com.linux.complex {
+module complex {
 	requires javafx.graphics;
 	requires javafx.controls;
-	requires com.linux.simple;
+	requires simple;
 }
