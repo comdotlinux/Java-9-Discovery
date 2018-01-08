@@ -22,3 +22,7 @@ public class SimpleUiApp extends Application{
 // cd jpms
 // javac simple/module-info.java simple/com/linux/simple/SimpleUiApp.java simple/com/linux/simple/generators/ContentsGenerator.java simple/com/linux/simple/generators/internal/DefaultContentsGenerator.java
 // java --module-path simple --module simple/com.linux.simple.SimpleUiApp
+
+// jdeps --module-path simple --dot-output . --module simple
+// jdeps --module-path simple --dot-output . --module simple -s
+// http://www.webgraphviz.com/
