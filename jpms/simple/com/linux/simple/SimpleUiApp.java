@@ -1,4 +1,4 @@
-package com.linux.java.se.nine.jpms;
+package com.linux.simple;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -26,6 +26,9 @@ public class SimpleUiApp extends Application{
 }
 
 
-
-// javac com/module-info.java  com/linux/java/se/nine/jpms/SimpleUiApp.java
-// java --module-path com.linux.java.se.nine.jpms com.linux.java.se.nine.jpms.SimpleUiApp
+// cd jpms
+// javac simple/module-info.java  simple/com/linux/simple/SimpleUiApp.java
+// cd simple && java com.linux.simple.SimpleUiApp
+// java --module-path simple --module simple/com.linux.simple.SimpleUiApp
+// jlink --module-path simple:/usr/lib/jvm/java-9-oracle/jmods --add-modules simple --limit-modules simple --launcher simpleJfxApp=simple/com.linux.simple.SimpleUiApp --output tmp
+// ./tmp/bin/java --list-modules

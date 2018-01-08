@@ -1,4 +1,5 @@
-module com.linux.java.se.nine.jpms {
+module simple {
 	requires javafx.graphics;
 	requires javafx.controls;
+	exports com.linux.simple;
 }
