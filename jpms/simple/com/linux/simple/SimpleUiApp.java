@@ -25,6 +25,7 @@ public class SimpleUiApp extends Application{
 
 // jdeps --module-path simple --dot-output . --module simple
 // jdeps --module-path simple --dot-output . --module simple -s
+// dot -Tpng simple.dot > simple.png
 // http://www.webgraphviz.com/ 
 
 // javac -d target simple/module-info.java simple/com/linux/simple/SimpleUiApp.java simple/com/linux/simple/generators/ContentsGenerator.java simple/com/linux/simple/generators/internal/DefaultContentsGenerator.java
