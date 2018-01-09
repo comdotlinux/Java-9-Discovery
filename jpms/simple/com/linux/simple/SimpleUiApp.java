@@ -33,6 +33,9 @@ public class SimpleUiApp extends Application{
 // jar -cvf simple.jar  -C target/ .
 // java --module-path simple.jar --module simple/com.linux.simple.SimpleUiApp
 
+// jdeps --dot-output . -s simple.jar
+// dot -Tpng summary.dot > summary.png
+
 // Executable jar 
 // jar -cvfe simple.jar com.linux.simple.SimpleUiApp -C target/ .
 // java -jar simple.jar
