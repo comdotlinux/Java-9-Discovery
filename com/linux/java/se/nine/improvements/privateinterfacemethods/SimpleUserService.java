@@ -1,4 +1,4 @@
-package com.linux.java.se.nine.privateinterfacemethods;
+package com.linux.java.se.nine.improvements.privateinterfacemethods;
 
 interface UserService{
 

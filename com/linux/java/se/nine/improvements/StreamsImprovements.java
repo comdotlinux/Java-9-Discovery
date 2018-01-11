@@ -1,4 +1,4 @@
-package com.linux.java.se.nine.streams.improvment;
+package com.linux.java.se.nine.improvements;
 
 import java.time.LocalDate;
 import java.time.Month;

@@ -1,4 +1,4 @@
-package com.linux.java.se.nine.completable.future.improvment;
+package com.linux.java.se.nine.completable.future.additions;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;

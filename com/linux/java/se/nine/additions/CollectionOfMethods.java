@@ -1,4 +1,4 @@
-package com.linux.java.se.nine.collection.addition;
+package com.linux.java.se.nine.completable.future.additions;
 
 import java.util.Arrays;
 import java.util.Collections;
