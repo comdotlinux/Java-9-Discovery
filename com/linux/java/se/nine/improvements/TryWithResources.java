@@ -15,12 +15,12 @@ class SimpleResource implements AutoCloseable{
 		} catch(InterruptedException ie) {
 			throw new RuntimeException(ie);
 		}
-		return "Work Done -- " + context;
+		return "from doWork : Work Done -- " + context;
 	}
 
 	@Override
 	public void close() {
-		System.out.printf("%nResource %s closed%n%n", name);
+		System.out.printf("from close : Resource %s closed%n", name);
 	}
 }
 
@@ -29,14 +29,14 @@ class SimpleResource implements AutoCloseable{
  */
 public class TryWithResources {
 	public static void main(String[] args) {
-		System.out.printf("%n-- Before :: %n");
+		System.out.printf("%n-- Before :: %n%n");
 		try(SimpleResource res = new SimpleResource("Inside Try With Resources")){
 			String workResponse = res.doWork("old style");
 			System.out.println(workResponse);
 		}
 
 
-		System.out.printf("%n-- After :: %n");
+		System.out.printf("%n-- After :: %n%n");
 		SimpleResource resource = new SimpleResource("Outside Try With Resources");
 		try(resource) {
 			String workResponse = resource.doWork("Java 9 Style");
