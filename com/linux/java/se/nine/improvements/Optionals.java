@@ -22,7 +22,7 @@ public class Optionals {
 
 		Optional<Book> aBook = getBooks()
 							.peek(b -> System.out.println(b.getBookAge().getMonths()))
-							.filter(b -> b.getBookAge().getMonths() > 12)
+							.filter(b -> b.getBookAge().getMonths() > 3)
 							.findAny();
 
 		System.out.println("In Java 8 ... ");
@@ -33,6 +33,9 @@ public class Optionals {
 		
 		System.out.println("Java 9 ... ");
 		aBook.ifPresentOrElse(System.out::println, () -> System.out.println("WARNING! Not Found"));
+
+		System.out.println("More Java 9 ... ");
+		System.out.println(aBook.or(() -> Optional.of(ej3e)));
 
 		bookReader(getBooks());
 
