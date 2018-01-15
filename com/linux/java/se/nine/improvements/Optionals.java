@@ -18,46 +18,44 @@ public class Optionals {
 
 	public static void main(String[] args) {
 
-		bookReader(getBooks());
+		bookReader("Unmodified Output of getBooks.", getBooks());
 
 		Optional<Book> aBook = getBooks()
-							.peek(b -> System.out.println(b.getBookAge().getMonths()))
+							// .peek(b -> System.out.println(b.getBookAge().getMonths()))
 							.filter(b -> b.getBookAge().getMonths() > 3)
 							.findAny();
 
-		System.out.println("In Java 8 ... ");
+		System.out.println("In Java 8 ...");
 		aBook.ifPresent(System.out::println);
 		
 		System.out.println("Still In Java 8 ... ");
-		System.out.println(aBook.orElse(ej3e));
+		System.out.println(aBook.orElse(ej3e)); // returns Type
 		
 		System.out.println("Java 9 ... ");
 		aBook.ifPresentOrElse(System.out::println, () -> System.out.println("WARNING! Not Found"));
 
 		System.out.println("More Java 9 ... ");
-		System.out.println(aBook.or(() -> Optional.of(ej3e)));
+		System.out.println(aBook.or(() -> Optional.of(ej3e))); // returns new Optional
 
-		bookReader(getBooks());
+		// Java 8 Style
+		Optional<Book> oldBook = getBooks()
+					// .peek(b -> System.out.println(b.getBookAge().getMonths()))
+					.filter(b -> b.getBookAge().getMonths() > 3)
+					.findAny();
+		bookReader("Java 8 Optional usage.", oldBook.isPresent() ? Stream.of(oldBook.get()) : Stream.empty());
 
-		// Won't compile
-		// bookReader(getBooks()
-		// 			.peek(b -> System.out.println(b.getBookAge().getMonths()))
-		// 			.filter(b -> b.getBookAge().getMonths() > 12)
-		// 			.findAny());  
-
-		bookReader(getBooks()
-					.peek(b -> System.out.println(b.getBookAge().getMonths()))
-					.filter(b -> b.getBookAge().getMonths() > 12)
+		bookReader("Java 9 Optional Usage", getBooks()
+					// .peek(b -> System.out.println(b.getBookAge().getMonths()))
+					.filter(b -> b.getBookAge().getMonths() > 3)
 					.findAny()
 					.stream());  
-
-
-		
 	}
 
-	private static void bookReader(Stream<Book> books) {
-		System.out.println("Reading books");
+	private static void bookReader(String context, Stream<Book> books) {
+		System.out.println(String.join("", Collections.nCopies(100, "-")));
+		System.out.println("Reading books in context :: (" + context + ")");
 		books.forEachOrdered(System.out::println);
-		System.out.println("Reading completed!");
+		System.out.println("Reading books in context :: (" + context + ") completed!");
+		System.out.println(String.join("", Collections.nCopies(100, "-")));
 	}
 }
