@@ -18,8 +18,8 @@ public class Optionals {
 		bookReader("Unmodified Output of getBooks.", getBooks());
 
 		Optional<Book> aBook = getBooks()
-							// .peek(b -> System.out.println(b.getBookAge().getMonths()))
-							.filter(b -> b.getBookAge().getMonths() > 3)
+							// .peek(b -> System.out.println(b.getBookAge().getYears()))
+							.filter(b -> b.getBookAge().getYears() > 3)
 							.findAny();
 
 		System.out.println("In Java 8 ...");
@@ -36,14 +36,14 @@ public class Optionals {
 
 		// Java 8 Style
 		Optional<Book> oldBook = getBooks()
-					// .peek(b -> System.out.println(b.getBookAge().getMonths()))
-					.filter(b -> b.getBookAge().getMonths() > 3)
+					// .peek(b -> System.out.println(b.getBookAge().getYears()))
+					.filter(b -> b.getBookAge().getYears() > 3)
 					.findAny();
 		bookReader("Java 8 Optional usage.", oldBook.isPresent() ? Stream.of(oldBook.get()) : Stream.empty());
 
 		bookReader("Java 9 Optional Usage", getBooks()
-					// .peek(b -> System.out.println(b.getBookAge().getMonths()))
-					.filter(b -> b.getBookAge().getMonths() > 3)
+					// .peek(b -> System.out.println(b.getBookAge().getYears()))
+					.filter(b -> b.getBookAge().getYears() > 3)
 					.findAny()
 					.stream());  
 	}
