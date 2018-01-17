@@ -73,7 +73,7 @@ public class BookGenerator {
 
 		@Override
 		public String toString() {
-			return String.format("Book{name=%-50s\tauthor=%-30s\tisbn=%-20s\tpublishDate=%10s}", name, author, isbn, publishDate);
+			return String.format("Book{name=%-50s\tauthor=%-30s\tisbn=%-20s\tpublishDate=%10s}%n", name, author, isbn, publishDate);
 		}
 
 	}

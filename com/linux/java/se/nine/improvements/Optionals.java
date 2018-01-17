@@ -1,15 +1,12 @@
 package com.linux.java.se.nine.improvements;
 
-import static java.util.stream.Collectors.toList;
 import static com.linux.java.se.nine.improvements.BookGenerator.*;
 
 import java.util.Collections;
-import java.util.List;
 import java.util.Optional;
-import java.util.function.Predicate;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 import java.util.stream.Stream;
-
-import com.linux.java.se.nine.improvements.BookGenerator.Book;
 
 /**
  * Optionals
@@ -51,11 +48,13 @@ public class Optionals {
 					.stream());  
 	}
 
+	private static final Consumer<Integer> dottedLine = numDots -> System.out.println(String.join("", Collections.nCopies(numDots, "-")));
+
 	private static void bookReader(String context, Stream<Book> books) {
-		System.out.println(String.join("", Collections.nCopies(100, "-")));
+		dottedLine.accept(100);
 		System.out.println("Reading books in context :: (" + context + ")");
 		books.forEachOrdered(System.out::println);
 		System.out.println("Reading books in context :: (" + context + ") completed!");
-		System.out.println(String.join("", Collections.nCopies(100, "-")));
+		dottedLine.accept(100);
 	}
 }
