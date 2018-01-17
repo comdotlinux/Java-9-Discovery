@@ -26,3 +26,6 @@ public class SimpleUiApp extends Application{
 }
 // export PATH=/usr/lib/jvm/java-9-oracle/bin:/usr/lib/jvm/java-9-oracle/db/bin:/usr/lib/jvm/java-9-oracle/jre/bin:$PATH
 // find Java-9-Discovery -type f -name "*.class" -exec rm -v {} + -o -name "*.jar" -exec rm -v {} +
+// cd jpms
+// javac simple/module-info.java  simple/com/linux/simple/SimpleUiApp.java
+// cd simple && java com.linux.simple.SimpleUiApp
