@@ -18,10 +18,10 @@ interface UserService{
 
 public class SimpleUserService implements UserService{
 
-	@Override
-	public String getUser() {
-		return "john";
-	}
+	// @Override
+	// public String getUser() {
+	// 	return "john";
+	// }
 
 	public static void main(String[] args) {
 		UserService s = new SimpleUserService();
