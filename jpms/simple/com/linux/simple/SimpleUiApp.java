@@ -26,9 +26,12 @@ public class SimpleUiApp extends Application{
 }
 
 
+// This still works.
 // cd jpms
 // javac simple/module-info.java  simple/com/linux/simple/SimpleUiApp.java
 // cd simple && java com.linux.simple.SimpleUiApp
+
+// this won't
 // java --module-path simple --module simple/com.linux.simple.SimpleUiApp
 // jlink --module-path simple:/usr/lib/jvm/java-9-oracle/jmods --add-modules simple --limit-modules simple --launcher simpleJfxApp=simple/com.linux.simple.SimpleUiApp --output tmp
 // ./tmp/bin/java --list-modules
