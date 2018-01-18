@@ -1,8 +1,6 @@
 # Java-9-Discovery
 Java 9 Meetup
 
-
-
 To run this program, you need to (of course install Java 9 and setup you PATH properly)
 1. Change to the directory where this README.md is.
 2. cd jpms
