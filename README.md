@@ -13,6 +13,8 @@ https://github.com/gurukulkarni/Java-9-Discovery/blob/01-jpms/jpms/simple/com/li
 
 For more details see https://github.com/gurukulkarni/Java-9-Discovery/wiki
 
-find . -type f -name "*.class" -exec rm -v {} +   // linux (actually GNU) command to remove all .class files from the project.
+find . -type f -name "*.class" -exec rm -v {} +
+
+Linux (actually GNU) command to remove all .class files from the project.
 This is needed so that when you switch with class files remaining and the directory structure changes, git cannot remove the directories as it is not empty.
 And no too mention I am too lazy to figure out how to configure VS Code to sent proper command to force this.
